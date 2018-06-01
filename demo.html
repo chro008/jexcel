@@ -1,0 +1,48 @@
+<script src="jexcel.js"></script>
+
+<script>
+
+var array = [
+	["name","age","sex"],
+	["jack","27","male"],
+	["lucy","25","female"],
+	["lily","25","female"],
+	["john","27","male"]
+];
+
+var object = [
+	{"name":"jack1","age":"27","sex":"male"},
+	{"name":"lucy1","age":"25","sex":"female"},
+	{"name":"lily1","age":"25","sex":"female"},
+	{"name":"john1","age":"27","sex":"male"}
+];
+
+function exportArr() {
+	Jexcel.exportArr(array, "array");
+}
+
+function exportObject() {
+	Jexcel.exportObject(object, "object");
+}
+
+</script>
+
+<p>如果你的数据类型类似</p>
+<p>"[
+<p>&nbsp;&nbsp;&nbsp;&nbsp;["name","age","sex"],</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;["jack","27","male"],</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;["lucy","25","female"],</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;["lily","25","female"],</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;["john","27","male"]</p>
+<p>]"</p>
+
+<a href="#" onclick="exportArr();">exportArr</a>
+
+<p>如果你的数据类型类似 </p>
+<p>"[</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;{"name":"jack1","age":"27","sex":"male"},</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;{"name":"lucy1","age":"25","sex":"female"},</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;{"name":"lily1","age":"25","sex":"female"},</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;{"name":"john1","age":"27","sex":"male"}</p>
+<p>]"</p>
+<a href="#" onclick="exportObject();">exportObject</a>
