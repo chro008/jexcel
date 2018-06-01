@@ -5,7 +5,7 @@ var Jexcel = {};
 (function(){
 	function getExport(csv, fileName){
 		if(csv.length > 0) {
-			var uri = 'data:text/csv;charset=utf-8,' + escape(csv);
+			var uri = 'data:text/csv;charset=utf-8,\ufeff' + encodeURIComponent(csv);
 			var link = document.createElement("a");
 			link.href = uri;
 			link.style = "visibility:hidden";
